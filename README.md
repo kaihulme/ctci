@@ -1,2 +1,3 @@
-# dsa
-Data structures and algorithm implementation and practice questions in C++ and Python.
+# ctci
+
+Data structures and algorithm implementations in C++ and Python with practice questions from Cracking the Coding Interview.
