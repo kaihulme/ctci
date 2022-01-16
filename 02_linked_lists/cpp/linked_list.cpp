@@ -36,6 +36,13 @@ class Node {
 			delete(curr_node);
 		}
 
+		void remove_head() {
+			Node* next_node = this->next;
+			this->data = next_node->data;
+			this->next = next_node->next;
+			delete(next_node);
+		}
+
 		void print() {
 			Node* curr_node = this;
 			while (curr_node->next != NULL) {
@@ -60,7 +67,9 @@ int main() {
 	linked_list->print();
 
 	linked_list->remove_tail();
+	linked_list->print();
 
+	linked_list->remove_head();
 	linked_list->print();
 
 	return 0;
