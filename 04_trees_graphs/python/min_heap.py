@@ -52,8 +52,7 @@ class MinHeap:
             return i * 2
         if self.heap[i * 2] <= self.heap[i * 2 + 1]:
             return i * 2
-        else:
-            return i * 2 + 1
+        return i * 2 + 1
         
     def heapify(self, xs):
         self.heap = [0] + xs
