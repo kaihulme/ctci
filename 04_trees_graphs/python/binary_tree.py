@@ -22,32 +22,26 @@ class BinaryTree:
             new_right.right = self.right
             self.right = new_right
             
-    def pre_order(self, tree=None):
-        if not tree:
-            tree = self
-        print(tree.val)
-        if tree.left:
-            tree.pre_order(tree.left)
-        if tree.right:
-            tree.pre_order(tree.right)
+    def pre_order(self):
+        print(self.val)
+        if self.left:
+            self.left.pre_order()
+        if self.right:
+            self.right.pre_order()
             
-    def in_order(self, tree=None):
-        if not tree:
-            tree = self
-        if tree.left:
-            tree.pre_order(tree.left)
-        print(tree.val)
-        if tree.right:
-            tree.pre_order(tree.right)
+    def in_order(self):
+        if self.left:
+            self.left.pre_order()
+        print(self.val)
+        if self.right:
+            self.right.pre_order()
             
-    def post_order(self, tree=None):
-        if not tree:
-            tree = self
-        if tree.left:
-            tree.pre_order(tree.left)
-        if tree.right:
-            tree.pre_order(tree.right)
-        print(tree.val)
+    def post_order(self):
+        if self.left:
+            self.left.pre_order()
+        if self.right:
+            self.right.pre_order()
+        print(self.val)
     
 
 btree = BinaryTree(1)
