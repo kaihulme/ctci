@@ -31,16 +31,16 @@ class BinaryTree:
 
     def in_order(self):
         if self.left:
-            self.left.pre_order()
+            self.left.in_order()
         print(self.val)
         if self.right:
-            self.right.pre_order()
+            self.right.in_order()
 
     def post_order(self):
         if self.left:
-            self.left.pre_order()
+            self.left.post_order()
         if self.right:
-            self.right.pre_order()
+            self.right.post_order()
         print(self.val)
 
 
@@ -52,4 +52,4 @@ btree.insert_right(4)
 # btree.print_tree()
 # btree.pre_order()
 # btree.in_order()
-btree.post_order()
+btree.postOrder()
